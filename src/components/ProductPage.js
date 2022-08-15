@@ -20,6 +20,10 @@ const ProductPage = ({ btnText, btnType }) => {
     getProduct();
   }, [id]); // <-- used as dependency
 
+  // const addProduct = () => {
+  //   alert('Item Added To Cart');
+  // };
+
   return (
     <div className='product-page-container'>
       <Container>
@@ -54,7 +58,9 @@ const ProductPage = ({ btnText, btnType }) => {
                     );
                   })}
               </ul>
-              <a className='more-features'>More Features</a>
+              <a href='#features' className='more-features'>
+                More Features
+              </a>
               <h4 className='price'>${product?.acf.price}</h4>
               <div className='cart-btn-container'>
                 <div className='count-container'>
@@ -72,28 +78,30 @@ const ProductPage = ({ btnText, btnType }) => {
           </Col>
         </Row>
       </Container>
-      <div className='product-page-content'>
+      <div className='product-page-content pb-3'>
         <Container className='mt-5'>
           <div className='descr-content mb-5'>
             <h3 className='heading'>Description</h3>
             <p dangerouslySetInnerHTML={{ __html: product?.content.rendered }} />
           </div>
-
-          <Accordion defaultActiveKey={['0']} flush>
-            <Accordion.Header>Features</Accordion.Header>
-            <Accordion.Body>
-              <ul className='features'>
-                {product?.acf.all_features &&
-                  product?.acf.all_features.map(data => {
-                    // console.log(data);
-                    return (
-                      <li key={data.id} className='feature'>
-                        {data.feature}
-                      </li>
-                    );
-                  })}
-              </ul>
-            </Accordion.Body>
+          <a id='features'></a>
+          <Accordion defaultActiveKey={['0']} alwaysOpen={true}>
+            <Accordion.Item>
+              <Accordion.Header>Features</Accordion.Header>
+              <Accordion.Body>
+                <ul className='features'>
+                  {product?.acf.all_features &&
+                    product?.acf.all_features.map(data => {
+                      // console.log(data);
+                      return (
+                        <li key={data.id} className='feature'>
+                          {data.feature}
+                        </li>
+                      );
+                    })}
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
           </Accordion>
         </Container>
       </div>

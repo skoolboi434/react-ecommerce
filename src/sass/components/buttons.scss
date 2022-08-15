@@ -25,4 +25,24 @@
     color: var(--black);
     border-color: none;
   }
+
+  &:active {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: none;
+  }
+
+  &:focus {
+    background-color: var(--white) !important;
+    color: var(--black);
+  }
+}
+
+.more-features {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--red);
+  text-decoration: none;
+  background: none;
+  border: none;
 }
