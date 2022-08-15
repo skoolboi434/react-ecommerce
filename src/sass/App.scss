@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/bootstrap';
+@import './components/product.scss';
+@import './components/buttons.scss';
+
+// Variables
+
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --gray: #666666;
+  --red: #c10;
+  --cartHover: #b30f14;
+  --black: #000;
+}

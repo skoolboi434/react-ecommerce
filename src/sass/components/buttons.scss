@@ -1,0 +1,28 @@
+.cartBtn {
+  background-color: var(--red);
+  border-color: var(--red);
+  width: 100%;
+  display: block;
+  transition-duration: 0.4s;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &:hover {
+    background-color: var(--cartHover);
+    border-color: var(--cartHover);
+  }
+}
+
+.countBtn {
+  background: var(--white);
+  color: var(--black);
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: none;
+  }
+}
