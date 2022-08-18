@@ -22,13 +22,15 @@ const Products = () => {
   }, []);
 
   return (
-    <Container>
-      <Row>
-        {products.map((product, index) => (
-          <ProductSingle product={product} key={product.id} />
-        ))}
-      </Row>
-    </Container>
+    <div className='products container mt-3'>
+      <Container>
+        <Row>
+          {products.map((product, index) => (
+            <ProductSingle product={product} key={product.id} />
+          ))}
+        </Row>
+      </Container>
+    </div>
   );
 };
 

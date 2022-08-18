@@ -25,7 +25,7 @@ const ProductPage = ({ btnText, btnType }) => {
   // };
 
   return (
-    <div className='product-page-container'>
+    <div className='product-page-container mt-5'>
       <Container>
         <Link to='/'>Back</Link>
         <Row>

@@ -1,14 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
 @import './components/product.scss';
 @import './components/buttons.scss';
+@import './components/main-nav.scss';
+@import './components/hero.scss';
 
 // Variables
 
 :root {
   --blue: #1e90ff;
   --white: #ffffff;
-  --gray: #666666;
+  --gray: #999;
+  --gray2: #e7e7e7;
   --red: #c10;
   --cartHover: #b30f14;
   --black: #000;
+}
+
+.customer-alert {
+  background-color: var(--gray2);
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  color: var(--red);
+  font-weight: 700;
 }
