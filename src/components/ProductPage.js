@@ -36,7 +36,7 @@ const ProductPage = ({ btnText, btnType }) => {
                   product?.acf.image_gallery.map(data => {
                     // console.log(data);
                     return (
-                      <Carousel.Item>
+                      <Carousel.Item key={data.id}>
                         <img className='img-fluid gallery-image' src={data.sizes.large} alt={data.alt} />
                       </Carousel.Item>
                     );

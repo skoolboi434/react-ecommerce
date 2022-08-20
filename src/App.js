@@ -3,6 +3,7 @@ import Products from './components/Products';
 import ProductPage from './components/ProductPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainNav from './components/MainNav';
+import Footer from './components/Footer';
 import Hero from './components/reusables/Hero';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           />
           <Route exact path='/product/:id' element={<ProductPage />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

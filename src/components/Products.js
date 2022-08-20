@@ -22,7 +22,7 @@ const Products = () => {
   }, []);
 
   return (
-    <div className='products container mt-3'>
+    <div className='products container mt-3 mb-5'>
       <Container>
         <Row>
           {products.map((product, index) => (
